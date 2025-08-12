@@ -10,12 +10,6 @@ import colors from "colors";
 // rest object
 const app = express();
 
-// port listen
-app.listen(port, () => {
-  console.log(`Application is running at port: ${port}`.bgCyan);
-  connectToMongoDB();
-});
-
 // middlewares
 config();
 app.use(json());
@@ -24,3 +18,9 @@ app.use(cors());
 
 // routes
 app.use("/api/v1/", indexRoute);
+
+// port listen
+app.listen(port, () => {
+  console.log(`Application is running at port: ${port}`.bgCyan);
+  connectToMongoDB();
+});
