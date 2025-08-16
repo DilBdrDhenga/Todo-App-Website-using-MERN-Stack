@@ -116,7 +116,7 @@ const loginUser = expressAsyncHandler(async (req, res, next) => {
     console.log(error.message);
     res.status(500).json({
       isSuccess: false,
-      message: "Login API",
+      message: "Error in Login API",
       error: error.message,
     });
   }

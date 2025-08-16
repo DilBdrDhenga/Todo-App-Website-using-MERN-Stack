@@ -1,9 +1,8 @@
-import expressAsyncHandler from "express-async-handler";
-
-const errorMiddleware = expressAsyncHandler((err, req, res, next) => {
-  res.status(400).json({
-    isSuccess: true,
+const errorMiddleware = (err, req, res, next) => {
+  const status = err.status || 400;
+  res.status(status).json({
+    isSuccess: false,
     message: err.message,
   });
-});
+};
 export default errorMiddleware;

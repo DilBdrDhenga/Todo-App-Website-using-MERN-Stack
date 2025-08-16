@@ -6,43 +6,11 @@ const Header = () => {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-orange-600">
             TodoZen
           </Link>
 
-          {/* Navigation Links */}
-          <nav className="hidden md:flex space-x-8 space-between gap-8">
-            <Link
-              to="/home"
-              className="text-gray-700 hover:text-orange-500 transition font-semibold"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about-us"
-              className="text-gray-700 hover:text-orange-500 transition font-semibold"
-            >
-              About
-            </Link>
-          </nav>
-
-          {/* Auth Buttons */}
           <div className="space-x-4 hidden md:flex">
-            {/* <Link
-              to="/login"
-              className="text-sm font-medium px-4 py-2 rounded-md  text-indigo-700 hover:text-orange-400"
-            >
-              Login
-            </Link>
-
-            <Link
-              to="/register"
-              className="bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 transition"
-            >
-              Sign Up
-            </Link> */}
-
             <Link
               to="/auth?mode=login"
               className="text-sm font-medium px-4 py-2 rounded-md text-indigo-700 hover:text-orange-400"

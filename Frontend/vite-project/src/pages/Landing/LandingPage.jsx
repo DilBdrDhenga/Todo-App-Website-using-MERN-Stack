@@ -34,7 +34,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Image */}
         <div className="mt-16 lg:mt-0 lg:ml-16">
           <img
             src={hero}

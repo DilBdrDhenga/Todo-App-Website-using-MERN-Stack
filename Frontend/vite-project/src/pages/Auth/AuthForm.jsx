@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import img from "next/image";
 import log from "../../assets/log.svg";
 import register from "../../assets/register.svg";
 import Login from "./Login";
@@ -9,7 +8,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
 const AuthForm = () => {
   const [searchParams] = useSearchParams();
-  const mode = searchParams.get("mode"); // 'login' or 'signup'
+  const mode = searchParams.get("mode");
   const [isSignUpMode, setIsSignUpMode] = useState(mode === "signup");
   const navigate = useNavigate();
 
@@ -18,7 +17,6 @@ const AuthForm = () => {
     navigate(`/auth?mode=${newMode}`);
   };
 
-  // Common button styles
   const buttonClasses = `w-full text-white bg-backgroundColor-500 hover:bg-brightColor focus:ring-4 focus:outline-none 
     focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all 
     duration-200 transform hover:scale-[1.02] hover:shadow-md`;

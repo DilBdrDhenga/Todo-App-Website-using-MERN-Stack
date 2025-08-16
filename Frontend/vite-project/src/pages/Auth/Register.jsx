@@ -46,7 +46,6 @@ const Register = ({ buttonClasses, toggleSignUpMode }) => {
 
         <form className="space-y-5 md:space-y-6" onSubmit={handleRegister}>
           <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 md:gap-6">
-            {/* Full Name Field */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <FaUser className="w-5 h-5 text-gray-500 transition-transform duration-300 hover:scale-110 hover:text-brightColor" />
@@ -62,7 +61,6 @@ const Register = ({ buttonClasses, toggleSignUpMode }) => {
               />
             </div>
 
-            {/* Email Field */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <MdEmail className="w-5 h-5 text-gray-500 transition-transform duration-300 hover:scale-110 hover:text-brightColor" />
@@ -75,10 +73,10 @@ const Register = ({ buttonClasses, toggleSignUpMode }) => {
                 className="bg-[#d5f2ec] border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-brightColor focus:border-brightColor block w-full pl-10 p-3 transition-all duration-200 shadow-sm"
                 placeholder="Email address"
                 required
+                autoComplete="userName"
               />
             </div>
 
-            {/* Password Field */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <RiLockPasswordFill className="w-5 h-5 text-gray-500 transition-transform duration-300 hover:scale-110 hover:text-brightColor" />
@@ -91,6 +89,7 @@ const Register = ({ buttonClasses, toggleSignUpMode }) => {
                 className="bg-[#d5f2ec] border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-brightColor focus:border-brightColor block w-full pl-10 pr-10 p-3 transition-all duration-200 shadow-sm"
                 placeholder="Password"
                 required
+                autoComplete="current-password"
               />
               <div
                 className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
